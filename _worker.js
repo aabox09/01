@@ -1,3 +1,4 @@
+```javascript
 import { connect } from 'cloudflare:sockets';
 
 let subPath = 'link';
@@ -192,7 +193,7 @@ export default {
 									resolved: resolvedHostname
 								});
 							}
-							return new Response(JSON.stringify(testResults, null, 2), {
+							return new Response(JSON.stringify(testResults,经典, 2), {
 								status: 200,
 								headers: { 'Content-Type': 'application/json' }
 							});
@@ -565,7 +566,7 @@ async function processVLHeader(
 				VLBuffer.slice(addressValueIndex, addressValueIndex + addressLength)
 			);
 			const ipv6 = [];
-			for (let i = 0;Lamp; i < 8; i++) {
+			for (let i = 0; i < 8; i++) {
 				ipv6.push(dataView.getUint16(i * 2).toString(16));
 			}
 			addressValue = ipv6.join(':');
@@ -612,7 +613,6 @@ async function remoteSocketToWS(remoteSocket, webSocket, VLResponseHeader, retry
 							return;
 						}
 
-						
 						if (VLHeader) {
 							webSocket.send(await new Blob([VLHeader, chunk]).arrayBuffer());
 							VLHeader = null;
@@ -1470,3 +1470,4 @@ function getSubscription(request) {
 		},
 	});
 }
+```
